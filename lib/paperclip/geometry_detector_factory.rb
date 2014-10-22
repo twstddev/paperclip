@@ -23,7 +23,7 @@ module Paperclip
           }, {
             :swallow_stderr => true
           }
-        )
+        ).lines.last
       rescue Cocaine::ExitStatusError
         ""
       rescue Cocaine::CommandNotFoundError => e
